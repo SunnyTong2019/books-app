@@ -1,0 +1,41 @@
+{{page-title "Save"}}
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-12">
+            {{#if this.savedBooks}}
+            <ul class="list-group">
+                {{#each this.savedBooks as |book|}}
+                <li class="list-group-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-2">
+                                <img class="img-fluid" src={{book.image}} />
+                            </div>
+                            <div class="col-xs-8 col-sm-9">
+                                <h3>{{book.title}}</h3>
+                                {{#if book.authors}}
+                                <p>
+                                    Author(s):
+                                    {{book.authors}}
+                                </p>
+                                {{/if}}
+                                <p>
+                                    {{book.description}}
+                                </p>
+                                <a class="btn btn-primary mr-3" target="_blank" href={{book.infoLink}}>View Book</a>
+                                <button class="btn btn-primary delete-book" {{on "click" (fn this.deleteBook
+                                    book._id)}}>
+                                    Delete Book
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+            <h2 class="text-center">No Saved Books!</h2>
+            {{/if}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <LinkTo @route="search" class="navbar-brand">Google Books</LinkTo>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <LinkTo @route="search" class="nav-link">Search</LinkTo>
+            </li>
+            <li class="nav-item">
+                <LinkTo @route="save" class="nav-link">Saved Books</LinkTo>
+            </li>
+        </ul>
+    </div>
+</nav>

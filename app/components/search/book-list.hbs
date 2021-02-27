@@ -1,0 +1,29 @@
+<ul class="list-group mb-5">
+    {{#each @bookList as |book|}}
+    <li class="list-group-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-sm-2">
+                    <img class="img-fluid" src={{book.volumeInfo.imageLinks.thumbnail}} />
+                </div>
+                <div class="col-xs-8 col-sm-9">
+                    <h3>{{book.volumeInfo.title}}</h3>
+                    {{#if book.volumeInfo.authors}}
+                    <p>
+                        Author(s):
+                        {{book.volumeInfo.authors}}
+                    </p>
+                    {{/if}}
+                    <p>
+                        {{book.volumeInfo.description}}
+                    </p>
+                    <a class="btn btn-primary mr-3" target="_blank" href={{book.volumeInfo.infoLink}}>View Book</a>
+                    <button class="btn btn-primary save-book" {{on "click" (fn this.saveBook book) }}>
+                        Save Book
+                    </button>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
