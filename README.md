@@ -19,7 +19,30 @@ The back end uses Node.js along with below NPM packages:
 - express
 - mongoose
 
+## Prerequisites
+
+You will need the following things properly installed on your computer.
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (with npm)
+- [MongoDB](https://docs.mongodb.com/manual/administration/install-community/)
+- [Google Chrome](https://google.com/chrome/)
+
+## Installation
+
+- `git clone <repository-url>` this repository
+- `cd books-app`
+- `npm install`
+- `npm run build`
+- `npm start`
+
+## Running
+
+- Visit the app in Google Chrome at [http://localhost:3000](http://localhost:3000).
+
 ## Deployed Link
+
+None.
 
 ## Motivation
 
